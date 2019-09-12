@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<!--
+Name: Garrett Becker
+Date Created: 9/12/2019
+Most Recent Revision: 9/12/2019
+
+Restaurant Site
+Contact Us page
+Version 1: HTML
+-->
+
+<html lang="en">
+    <head>
+        <title>Contact Us</title>
+    </head>
+    
+    <body>
+        <header>
+            <h1>Land of the Free Pub</h1>
+        </header>
+        
+        <hr />
+        <nav>
+            <p><a href="home.html">Home</a></p>
+            <p><a href="menu.html">Menu</a></p>
+            <p><a href="contact.html">Contact Us</a></p>
+        </nav>
+        
+        <hr />
+        
+        <section>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br/>
+                
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email"><br/>
+                
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone"><br/>
+                
+                <label for="inquiry">Reason for Inquiry:</label>
+                <select id="inquiry" name="inquiry">
+                    <option value="catering" selected>Catering</option>
+                    <option value="privateParty">Private Party</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                </select><br/>
+                
+                <label for="beenQuestion">Have you been to the restaurant?</label>
+                <input type="radio" id="choice1" name="beenQuestion" value="no">
+                <label for="choice1">No</label>
+                <input type="radio" id="choice2" name="beenQuestion" value="yes">
+                <label for="choice2">Yes</label><br/>
+                
+                <label for="contactQuestion">Best days to contact you:</label>
+                <input type="checkbox" id="monday" name="monday" value="monday">
+                <label for="monday">M</label>
+                <input type="checkbox" id="tuesday" name="tuesday" value="tuesday">
+                <label for="tuesday">T</label>
+                <input type="checkbox" id="wednesday" name="wednesday" value="wednesday">
+                <label for="wednesday">W</label>
+                <input type="checkbox" id="Thursday" name="Thursday" value="Thursday">
+                <label for="Thursday">Th</label>
+                <input type="checkbox" id="friday" name="friday" value="friday">
+                <label for="friday">F</label><br/>
+                
+                <input type="submit" name="sendRequest" value="Send Request">
+            </form>
+        </section>
+        
+        <footer>
+            <hr />
+            <p>7261 Tree Beard Blvd, Charlotte, NC 28108</p>
+            <p>721-892-0031</p>
+        </footer>
+    
+    </body>
+</html>
