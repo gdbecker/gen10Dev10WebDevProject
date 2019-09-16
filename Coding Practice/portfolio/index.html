@@ -3,12 +3,45 @@
 <!--
 Name: Garrett Becker
 Date Created: 9/12/2019
-Most Recent Revision: 9/12/2019
+Most Recent Revision: 9/16/2019
 -->
 
 <html lang="en">
     <head>
         <title>Garrett Becker's Portfolio</title>
+        <link href="styles/main.css" rel="stylesheet" type="text/css" />
+        
+        <style>
+            caption {
+                font-weight: bold;
+                font-size: 1.2em;
+                margin-bottom: 8px;
+            }
+            
+            table, th, td {
+                border: 1px solid #0d1f2d;
+                border-collapse: collapse;
+                padding: 5px 10px;
+            }
+            
+            table {
+                width: 90%;
+                margin: auto;
+            }
+            
+            tr {
+                height: 30px;
+            }
+            
+            th {
+                background-color: #546a7b;
+                color: #f2eded;
+            }
+            
+            tr:nth-child(odd) {
+                background-color: #e4c3ad;
+            }
+        </style>
     </head>
     
     <body>
@@ -16,55 +49,63 @@ Most Recent Revision: 9/12/2019
             <h1>Portfolio for Garrett Becker</h1>
         </header>
         
-        <hr />
-        <nav>
+        <nav class="border">
             <p><a href="projects.html">Projects</a></p>
             <p><a href="contact.html">Contact</a></p>
             <p><a href="testimonials.html">Testimonials</a></p>
+            <div class="clear-float"></div>
         </nav>
-        <hr />
         
         <section>
             
-        <article id="about-me">
-        <h2><em>About Me</em></h2>
-        <img src="images/profPic.jpeg" alt="Photo of Garrett Becker" style="width: 300px"/>
-        <p>Learner || In each opportunity I have, it's my goal to learn quickly and efficiently while also not being afraid to break new ground and explore new topics and information. I strive to share knowledge with others around me and collaborate.</p>
-        <p>Initiator || I seek to ask questions and understand, and when problems come up, I make a point to utilize the resources and knowledge I have to resolve them. It's a goal of mine to continuously challenge myself to make the first move and communicate clearly.</p>
-        <p>Creator || I aim to develop creative solutions in each capacity I am in and think outside the box. I love creating and building, and through those things mastering skills to enable myself to present solutions to make people's lives easier. I am at my best when focused and collaborating with a team on projects. </p>
+        <article class="border" id="about-me">
+            <h2><em>About Me</em></h2>
+            <img src="images/profPic.jpeg" alt="Photo of Garrett Becker" style="width: 300px"/>
+            <p>Learner || In each opportunity I have, it's my goal to learn quickly and efficiently while also not being afraid to break new ground and explore new topics and information. I strive to share knowledge with others around me and collaborate.</p>
+            <p>Initiator || I seek to ask questions and understand, and when problems come up, I make a point to utilize the resources and knowledge I have to resolve them. It's a goal of mine to continuously challenge myself to make the first move and communicate clearly.</p>
+            <p>Creator || I aim to develop creative solutions in each capacity I am in and think outside the box. I love creating and building, and through those things mastering skills to enable myself to present solutions to make people's lives easier. I am at my best when focused and collaborating with a team on projects. </p>
+            <div class="clear-float"></div>
         </article>
         
-        <article id="past-experiences">
+        <article id="experience">
         <h2><em>Past Experiences</em></h2>
         <img src="images/work.jpg" alt="Photo of a work desk" style="width: 300px"/>
+        <div class="right-content">
         <table>
             <caption>Employment History</caption>   
-            <tr>
-                <th>Years of Employment</th>
-                <th>Title</th>
-                <th>Company</th>
-            </tr>
-            <tr>
-                <td>2019-Present</td>
-                <td>Apprentice</td>
-                <td>The Software Guild</td>
-            </tr>
-            <tr>
-                <td>2018-2019</td>
-                <td>International Intern</td>
-                <td>Campus Crusade for Christ</td>
-            </tr>
-            <tr>
-                <td>2017-2018</td>
-                <td>Undergraduate Research Assistant</td>
-                <td>North Carolina State University</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Years of Employment</th>
+                    <th>Title</th>
+                    <th>Company</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2019-Present</td>
+                    <td>Apprentice</td>
+                    <td>The Software Guild</td>
+                </tr>
+                <tr>
+                    <td>2018-2019</td>
+                    <td>International Intern</td>
+                    <td>Campus Crusade for Christ</td>
+                </tr>
+                <tr>
+                    <td>2017-2018</td>
+                    <td>Undergraduate Research Assistant</td>
+                    <td>North Carolina State University</td>
+                </tr>
+            </tbody>
         </table>
+        </div>
+        <div class="clear-float"></div>
         </article>
             
         <article id="hobbies">
         <h2><em>Hobbies</em></h2>
         <img src="images/mountains.jpg" alt="Photo of mountains" style="width: 300px"/>
+        <div class="right-content">
         <ul>
             <li>Authors</li>
             <ol>
@@ -92,16 +133,14 @@ Most Recent Revision: 9/12/2019
                 <li>Hiking</li>
                 <li>Whitewater rafting</li>
             </ul>
-        </ul>    
+        </ul>  
+        </div>
+        <div class="clear-float"></div>
         </article>
         </section>
         
         <footer>
-            <hr />
             <p>&copy; 2019 Garrett Becker. All rights reserved.</p>
         </footer>
-    
     </body>
-    
-    <hr />
 </html>
