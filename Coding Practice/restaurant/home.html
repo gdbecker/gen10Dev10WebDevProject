@@ -3,7 +3,7 @@
 <!--
 Name: Garrett Becker
 Date Created: 9/12/2019
-Most Recent Revision: 9/12/2019
+Most Recent Revision: 9/18/2019
 
 Restaurant Site
 Home page
@@ -13,6 +13,35 @@ Version 1: HTML
 <html lang="en">
     <head>
         <title>Home Page</title>
+        <link rel="stylesheet" href="styles/restaurantStyles.css" type="text/css">
+        
+        <style>
+            section {
+                background-color: #004669;
+                padding-top: 25px;
+                padding-bottom: 25px;
+                color: #FAFAFA;
+                text-align: center;
+                text-justify: auto;
+                font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+            }
+            
+            section p {
+                max-width: 600px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            img {
+                border: 5px solid #FAFAFA;
+            }
+            
+            h2 {
+                font-weight: bold;
+            }
+            
+        </style>
     </head>
     
     <body>
@@ -25,25 +54,25 @@ Version 1: HTML
             <p><a href="home.html">Home</a></p>
             <p><a href="menu.html">Menu</a></p>
             <p><a href="contact.html">Contact Us</a></p>
+            <div class="clear-float"></div>
         </nav>
         
         <hr />
         
         <section>
             <article>
-                <img src="images/homePage.jpg" alt="Photo bald eagle soaring" style="width: 500px"/>
+                <img src="images/homePage.jpg" alt="Photo bald eagle soaring" style="display: block; width: 50%; margin-right: auto; margin-left: auto;"/>
             </article>
             
             <article>
                 <h2>About Land of the Free Pub</h2>
-                <p>Welcome to your new home away from home located in close proximity to uptown Charlotte! Featuring a rustic atmosphere and several American favorites, along with newly released options, you are bound to find something you will love here. We are a family owned business and have been open for the past twenty years, serving guests who have quickly become like family to us. We hope to meet you soon at our neighborhood pub, where freedom takes flight!</p>
+                <p>Welcome to your new home away from home located in close proximity to uptown Charlotte, NC! Featuring a rustic atmosphere and several American favorites, along with newly released options, you are bound to find something you will love here. We are a family owned business and have been open for the past twenty years, serving guests who have quickly become like family to us. We hope to meet you soon at our neighborhood pub, where freedom takes flight!</p>
             </article>
         
         </section>
         
         <footer>
-            <hr />
-            <p>7261 Tree Beard Blvd, Charlotte, NC 28108</p>
+            <p>7261 Tree Beard Blvd, Charlotte, NC, 28108</p>
             <p>721-892-0031</p>
         </footer>
     

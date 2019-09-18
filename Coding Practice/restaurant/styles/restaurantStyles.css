@@ -1,0 +1,57 @@
+/*
+Creator: Garrett Becker
+Date created: 9/18/2019
+Date last modified: 9/18/2019
+
+Color Scheme
+Dark Imperial Blue: #004669
+Carmine Pink: #E54B4B
+Snow: #FAFAFA
+Livid: #6699CC
+Raisin Black: #262626
+*/
+
+header {
+    background-color: #E54B4B;
+    height: 90px;
+    color: #FAFAFA;
+    text-align: center;
+    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    font-size: 1.4em;
+    font-variant: small-caps;
+    padding: 10px 10px 50px 10px;
+}
+
+footer {
+    background-color: #262626;
+    height: 70px;
+    color: #FAFAFA;
+    text-align: center;
+    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    padding: 10px 10px 20px 10px;
+}
+
+nav a{
+    color: #262626;
+    padding: 8px;
+    text-align: left;
+    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    width: 90px;
+    float:left;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+nav a:visited {
+    color: #E54B4B;
+}
+
+nav a:active {
+    text-decoration: none;
+}
+
+.clear-float {
+    clear:both;
+}

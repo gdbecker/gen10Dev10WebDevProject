@@ -3,7 +3,7 @@
 <!--
 Name: Garrett Becker
 Date Created: 9/12/2019
-Most Recent Revision: 9/12/2019
+Most Recent Revision: 9/18/2019
 
 Restaurant Site
 Contact Us page
@@ -13,6 +13,24 @@ Version 1: HTML
 <html lang="en">
     <head>
         <title>Contact Us</title>
+        <link rel="stylesheet" href="styles/restaurantStyles.css" type="text/css">
+        
+        <style>
+            label {
+                font-weight: bold;
+            }
+            
+            div {
+                text-align: center;
+            }
+            
+            label, input, select, option {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+        </style>
     </head>
     
     <body>
@@ -25,11 +43,13 @@ Version 1: HTML
             <p><a href="home.html">Home</a></p>
             <p><a href="menu.html">Menu</a></p>
             <p><a href="contact.html">Contact Us</a></p>
+            <div class="clear-float"></div>
         </nav>
         
         <hr />
         
         <section>
+            <div>
             <form>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name"><br/>
@@ -68,11 +88,11 @@ Version 1: HTML
                 
                 <input type="submit" name="sendRequest" value="Send Request">
             </form>
+            </div>
         </section>
         
         <footer>
-            <hr />
-            <p>7261 Tree Beard Blvd, Charlotte, NC 28108</p>
+            <p>7261 Tree Beard Blvd, Charlotte, NC, 28108</p>
             <p>721-892-0031</p>
         </footer>
     
