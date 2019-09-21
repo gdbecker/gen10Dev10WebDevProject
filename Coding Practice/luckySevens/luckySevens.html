@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/JavaScript" src="luckySevens.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="container">
+    <h1>Lucky Sevens</h1>
+    <form name="luckySevens" onsubmit="return playGame();" class="form-inline">
+            <div class="form-group">
+                <label for="startingBet">Starting Bet</label>
+                <span>$<input type="number" class="form-control" id="startingBet" step=".01"></span>
+            </div>
+            <br/>
+            <button type="submit" id="playButton" class="btn btn-default">Play</button>
+    </form>
+    <div id="results" style="visibility: hidden">
+        <hr/>
+        <h2>Results</h2>
+        <table id="resultsTable" class="table table-striped">
+            <tr>
+                <td>Starting Bet</td>
+                <td><span id="startBet"></span></td>
+            </tr>
+            <tr>
+                <td>Total Rolls Before Going Broke</td>
+                <td><span id="totalRolls"></span></td>
+            </tr>
+            <tr>
+                <td>Highest Amount Won</td>
+                <td><span id="highestAmt"></span></td>
+            </tr>
+            <tr>
+                <td>Roll Count at Highest Amount Won</td>
+                <td><span id="rollCount"></span></td>
+            </tr>
+        </table>
+        
+        <form name="playAgain" onsubmit="return resetGame();" class="form-inline">
+            <br/>
+            <button type="submit" id="playAgainButton" class="btn btn-default">Play Again?</button>
+    </form>
+    </div>
+</div>
+</body>
+</html>
