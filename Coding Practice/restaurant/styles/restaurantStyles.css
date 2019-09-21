@@ -1,7 +1,7 @@
 /*
 Creator: Garrett Becker
 Date created: 9/18/2019
-Date last modified: 9/18/2019
+Date last modified: 9/21/2019
 
 Color Scheme
 Dark Imperial Blue: #004669
@@ -11,47 +11,75 @@ Livid: #6699CC
 Raisin Black: #262626
 */
 
-header {
+header.main {
     background-color: #E54B4B;
-    height: 90px;
+    height: 130px;
     color: #FAFAFA;
     text-align: center;
     font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
-    font-size: 1.4em;
+    font-size: 1.7em;
     font-variant: small-caps;
-    padding: 10px 10px 50px 10px;
+    padding: 40px 10px 50px 10px;
 }
 
 footer {
     background-color: #262626;
-    height: 70px;
+    height: 120px;
     color: #FAFAFA;
     text-align: center;
     font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
-    padding: 10px 10px 20px 10px;
+    padding: 30px 10px 50px 10px;
 }
 
 nav a{
-    color: #262626;
+    color: #FAFAFA;
     padding: 8px;
+    margin-left: 10px;
+    margin-top: 8px;
     text-align: left;
+    text-decoration: underline;
     font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
-    width: 90px;
+    width: 190px;
     float:left;
 }
 
-nav a:hover {
-    font-weight: bold;
-}
-
 nav a:visited {
-    color: #E54B4B;
+    color: #004669;
 }
 
 nav a:active {
     text-decoration: none;
 }
 
+nav {
+    width: inherit;
+    border-top: thin #E54B4B solid;
+    border-bottom: thin #004669 solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+            
+nav .btn {
+    background-color: #6699CC;
+    color: #FAFAFA;
+    margin-left: 8px;
+}
+            
+nav .btn:hover{
+    font-weight: bold;
+}
+
+#links {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.icon {
+    width: 20px;
+    height: 20px;
+}
 .clear-float {
     clear:both;
 }

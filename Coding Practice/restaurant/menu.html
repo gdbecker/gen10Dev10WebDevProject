@@ -3,7 +3,7 @@
 <!--
 Name: Garrett Becker
 Date Created: 9/12/2019
-Most Recent Revision: 9/18/2019
+Most Recent Revision: 9/21/2019
 
 Restaurant Site
 Menu page
@@ -14,6 +14,9 @@ Version 1: HTML
     <head>
         <title>Menu</title>
         <link rel="stylesheet" href="styles/restaurantStyles.css" type="text/css">
+        
+        <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
         
         <style>
             table, th, td {
@@ -26,16 +29,8 @@ Version 1: HTML
                 margin-right: auto;
             }
             
-            table.center {
-                
-            }
-            
             td {
                 vertical-align:top;
-            }
-            
-            thead {
-                font-size: 1.3em;
             }
             
             section {
@@ -44,7 +39,7 @@ Version 1: HTML
                 padding-bottom: 10px;
             }
             
-            h2 {
+            h2.tableTitle {
                 font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
                 text-align: center;
                 color: #FAFAFA;
@@ -72,67 +67,109 @@ Version 1: HTML
             table.beverages tr:nth-child(even) {
                 background-color: #E54B4B;
             }
+            
+            article.menuItems {
+                margin-top: 15px;
+                margin-bottom: 15px;
+                margin-left: 15px;
+                margin-right: 15px;    
+            }
+            
+            div.menuItems {
+                font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+                text-align: center;
+                color: #FAFAFA;
+                float: left; 
+                padding-left: 10px;
+                padding-right: 10px;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+            
+            h3.menuItems {
+                font-weight: bold;
+            }
         </style>
     </head>
     
     <body>
-        <header>
-            <h1>Land of the Free Pub</h1>
+        <header class="jumbotron">
+            <h2>Exciting News!</h2>
+            <h3>New location opening soon!</h3>
+            <h4 class="font-italic">Stay tuned for more information coming soon</h4>
         </header>
         
-        <hr />
+        <header class="main">
+            <h1>Land of the Free Pub</h1>
+        </header>
+
         <nav>
-            <p><a href="home.html">Home</a></p>
-            <p><a href="menu.html">Menu</a></p>
-            <p><a href="contact.html">Contact Us</a></p>
-            <div class="clear-float"></div>
+            <div id="links" class="row">
+                <div class="col-sm-4"><a class="btn badge-pill" href="home.html"><img class="icon" src="svg/home.svg" alt="Home"></a></div>
+                <div class="col-sm-4"><p><a class="btn badge-pill" href="menu.html">Menu</a></p></div>
+                <div class="col-sm-4"><p><a class="btn badge-pill" href="contact.html">Contact Us</a></p></div>
+                <div class="clear-float"></div>
+            </div>
         </nav>
         
-        <hr />
-        
         <section>
-            <h2>Daily Menu</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Burger and Fries</th>
-                        <th>Hot Dog and Chips</th>
-                        <th>Italian Sausage and Peppers</th>
-                    </tr>
-                </thead>
+            <!--Daily menu info-->
+            <h2 class="tableTitle">Daily Menu</h2>
+            <article class="menuItems">
+                <div class="row">
+                <div class="col-lg-4 col-md">
+                    <div class="menuItems">
+                        <h3 class="menuItems">Burger and Fries</h3>
+                        <p>An American Classic!<br/>Your choice - with or without cheese<br/>Pickle, onion, tomato, and lettuce<br/>Served with our famous thick cut french fries<br/>$7.95</p>
+                    </div>
+                </div>
                 
-                <tbody>
-                    <tr>
-                        <td>An American Classic!<br/>Your choice - with or without cheese<br/>Pickle, onion, tomato, and lettuce<br/>Served with our famous thick cut french fries<br/>$7.95</td>
-                        <td>A Summer Classic!<br/>Your choice - white or wheat bun<br/>Relish, mustard, and ketchup<br/>Served with our house-made chips<br/>$7.95</td>
-                        <td>An All-Time Favorite!<br/>Your choice - mild or spicy Cole Slaw<br/>Served with garlic mashers<br/>$10.95</td>
-                    </tr>
-                </tbody>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                    <thead>
-                        <tr>
-                            <th>Tenderloin Sandwich and Chips</th>
-                            <th>House Salad</th>
-                            <th>Brisket Sandwich and Fries</th>
-                        </tr>
-                    </thead>
-                <tbody>
-                    <tr>
-                        <td>Really Hits the Spot!<br/>Plain or Sesame Seed Sun<br/>Pickle, onion, tomato, and lettuce<br/>Served with our house-made chips<br/>$8.95</td>
-                        <td>On the Lighter Side<br/>Your choice - with or without cheese<br/>Iceburg lettuce, tomatoes, peppers<br/>Thousand Island or Ranch<br/>Dressing served with a dinner roll <br/>$6.95</td>
-                        <td>A Taste of Texas!<br/>Smoked Brisket on thick-cut Texas Toast<br/>Cole Slaw<br/>Served with our famous thick-cut french fries<br/>$7.95</td>
-                    </tr>
-                </tbody>
-            </table>
+                <div class="col-lg-4 col-md">
+                    <div class="menuItems">
+                        <h3 class="menuItems">Hot Dog and Chips</h3>
+                        <p>A Summer Classic!<br/>Your choice - white or wheat bun<br/>Relish, mustard, and ketchup<br/>Served with our house-made chips<br/>$7.95</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md">
+                    <div class="menuItems">
+                        <h3 class="menuItems">Italian Sausage and Peppers</h3>
+                        <p>An All-Time Favorite!<br/>Your choice - mild or spicy Cole Slaw<br/>Served with garlic mashers<br/>$10.95</p>
+                    </div>
+                </div>
+                </div>
+                <div class="clear-float"></div>
+                
+                <div class="row">
+                <div class="col-lg-4 col-md">
+                    <div class="menuItems">
+                        <h3 class="menuItems">Tenderloin Sandwich and Chips</h3>
+                        <p>Really Hits the Spot!<br/>Plain or Sesame Seed Sun<br/>Pickle, onion, tomato, and lettuce<br/>Served with our house-made chips<br/>$8.95</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md">
+                    <div class="menuItems">
+                        <h3 class="menuItems">House Salad</h3>
+                        <p>On the Lighter Side<br/>Your choice - with or without cheese<br/>Iceburg lettuce, tomatoes, peppers<br/>Thousand Island or Ranch<br/>Dressing served with a dinner roll <br/>$6.95</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md">
+                    <div class="menuItems">
+                        <h3 class="menuItems">Brisket Sandwich and Fries</h3>
+                        <p>A Taste of Texas!<br/>Smoked Brisket on thick-cut Texas Toast<br/>Cole Slaw<br/>Served with our famous thick-cut french fries<br/>$7.95</p>
+                    </div>
+                </div>
+                </div>
+                <div class="clear-float"></div>
+            </article>
             
             <br/>
             
-            <h2>Beverages</h2>
-            
+            <!--Beverages info-->
+            <h2 class="tableTitle">Beverages</h2>
             <table class="beverages">
                 <tbody>
                     <tr>
@@ -160,5 +197,9 @@ Version 1: HTML
             <p>721-892-0031</p>
         </footer>
     
+        <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
 </html>
