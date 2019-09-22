@@ -3,11 +3,18 @@
 <!--
 Name: Garrett Becker
 Date Created: 9/12/2019
-Most Recent Revision: 9/21/2019
+Most Recent Revision: 9/22/2019
 
 Restaurant Site
 Contact Us page
 Version 1: HTML
+
+Color Scheme
+Dark Imperial Blue: #004669
+Carmine Pink: #E54B4B
+Snow: #FAFAFA
+Livid: #6699CC
+Raisin Black: #262626
 -->
 
 <html lang="en">
@@ -15,13 +22,16 @@ Version 1: HTML
         <title>Contact Us</title>
         <link rel="stylesheet" href="styles/restaurantStyles.css" type="text/css">
         
+        <!--CSS Bootstap link and info-->
         <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
         
+        <!--External .js file for validating the form-->
         <script type="text/JavaScript" src="scripts/contactForm.js"></script>
         
+        <!--Internal style sheet-->
         <style>
-            label {
+            #required {
                 font-weight: bold;
             }
             
@@ -34,6 +44,11 @@ Version 1: HTML
                 padding-bottom: 5px;
                 margin-top: 5px;
                 margin-bottom: 10px;
+            }
+            
+            textarea {
+                width: 40%;
+                height: 100px;
             }
         </style>
     </head>
@@ -62,53 +77,90 @@ Version 1: HTML
             <div>
             <form name="contact" onsubmit="return validate();">
                 <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name"><br/>
+                    <div class="row">
+                        <div class="col-lg-12 col-md">
+                            <label id="required" for="name">Name:</label>
+                            <input type="text" id="name" name="name" required><br/>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email"><br/>
+                    <div class="row">
+                        <div class="col-lg-12 col-md">
+                            <label id="required" for="email">Email:</label>
+                            <input type="text" id="email" name="email" required><br/>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="form-group">
-                <label for="phone">Phone:</label>
-                <input type="text" id="phone" name="phone"><br/>
+                    <div class="row">
+                        <div class="col-lg-12 col-md">
+                            <label id="required" for="phone" required>Phone:</label>
+                            <input type="text" id="phone" name="phone" required><br/>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="form-group">
-                <label for="inquiry">Reason for Inquiry:</label>
-                <select id="inquiry" name="inquiry">
-                    <option value="catering" selected>Catering</option>
-                    <option value="privateParty">Private Party</option>
-                    <option value="feedback">Feedback</option>
-                    <option value="other">Other</option>
-                </select><br/>
+                    <div class="row">
+                        <div class="col-lg-12 col-md">
+                            <label id="required" for="inquiry">Reason for Inquiry:</label>
+                            <select id="inquiry" name="inquiry">
+                                <option value="catering" selected>Catering</option>
+                                <option value="privateParty">Private Party</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select><br/>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="form-group">
-                <label for="beenQuestion">Have you been to the restaurant?</label>
-                <input type="radio" id="choice1" name="beenQuestion" value="no">
-                <label for="choice1">No</label>
-                <input type="radio" id="choice2" name="beenQuestion" value="yes">
-                <label for="choice2">Yes</label><br/>
+                    <div class="row">
+                        <div class="col-lg-12 col-md">
+                            <label for="addInfo">Additional Information:</label><br/>
+                            <textarea name="addInfo"></textarea><br/>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="form-group">
-                <label for="contactQuestion">Best days to contact you:</label>
-                <input type="checkbox" id="monday" name="monday" value="monday">
-                <label for="monday">M</label>
-                <input type="checkbox" id="tuesday" name="tuesday" value="tuesday">
-                <label for="tuesday">T</label>
-                <input type="checkbox" id="wednesday" name="wednesday" value="wednesday">
-                <label for="wednesday">W</label>
-                <input type="checkbox" id="Thursday" name="Thursday" value="Thursday">
-                <label for="Thursday">Th</label>
-                <input type="checkbox" id="friday" name="friday" value="friday">
-                <label for="friday">F</label><br/>
+                    <div class="row">
+                        <div class="col-lg-12 col-md">
+                            <label id="required" for="beenQuestion">Have you been to the restaurant?</label>
+                            <input type="radio" id="choice1" name="beenQuestion" value="no">
+                            <label for="choice1">No</label>
+                            <input type="radio" id="choice2" name="beenQuestion" value="yes">
+                            <label for="choice2">Yes</label><br/>
+                        </div>
+                    </div>
                 </div>
                 
-                <button type="submit" name="sendRequest" class="btn btn-default">Send Request</button>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-lg-12 col-md">
+                            <label id="required" for="contactQuestion">Best days to contact you:</label>
+                            <input type="checkbox" id="monday" name="contactDays" value="monday">
+                            <label for="monday">M</label>
+                            <input type="checkbox" id="tuesday" name="contactDays" value="tuesday">
+                            <label for="tuesday">T</label>
+                            <input type="checkbox" id="wednesday" name="contactDays" value="wednesday">
+                            <label for="wednesday">W</label>
+                            <input type="checkbox" id="Thursday" name="contactDays" value="Thursday">
+                            <label for="Thursday">Th</label>
+                            <input type="checkbox" id="friday" name="contactDays" value="friday">
+                            <label for="friday">F</label><br/>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                        <div class="col-lg-12 col-md">
+                            <button type="submit" name="sendRequest" class="btn btn-default">Send Request</button>
+                    </div>
+                </div>
             </form>
             <br/>
             </div>
@@ -119,6 +171,7 @@ Version 1: HTML
             <p>721-892-0031</p>
         </footer>
     
+        <!--JavaScript Bootstap link and info-->
         <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

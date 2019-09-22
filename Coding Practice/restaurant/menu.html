@@ -3,11 +3,18 @@
 <!--
 Name: Garrett Becker
 Date Created: 9/12/2019
-Most Recent Revision: 9/21/2019
+Most Recent Revision: 9/22/2019
 
 Restaurant Site
 Menu page
 Version 1: HTML
+
+Color Scheme
+Dark Imperial Blue: #004669
+Carmine Pink: #E54B4B
+Snow: #FAFAFA
+Livid: #6699CC
+Raisin Black: #262626
 -->
 
 <html lang="en">
@@ -15,9 +22,11 @@ Version 1: HTML
         <title>Menu</title>
         <link rel="stylesheet" href="styles/restaurantStyles.css" type="text/css">
         
+        <!--CSS Bootstap link and info-->
         <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
         
+        <!--Internal style sheet-->
         <style>
             table, th, td {
                 font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
@@ -115,7 +124,12 @@ Version 1: HTML
         
         <section>
             <!--Daily menu info-->
-            <h2 class="tableTitle">Daily Menu</h2>
+            <div class="row">
+                <div class="col-lg-12 col-md">
+                    <h2 class="tableTitle">Daily Menu</h2>
+                </div>
+            </div>
+                    
             <article class="menuItems">
                 <div class="row">
                 <div class="col-lg-4 col-md">
@@ -169,7 +183,14 @@ Version 1: HTML
             <br/>
             
             <!--Beverages info-->
-            <h2 class="tableTitle">Beverages</h2>
+            <div class="row">
+                <div class="col-lg-12 col-md">
+                    <h2 class="tableTitle">Beverages</h2>
+                </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-lg-12 col-md">
             <table class="beverages">
                 <tbody>
                     <tr>
@@ -190,6 +211,8 @@ Version 1: HTML
                     </tr>
                 </tbody>
             </table>
+            </div>
+            </div>
         </section>
         
         <footer>
@@ -197,6 +220,7 @@ Version 1: HTML
             <p>721-892-0031</p>
         </footer>
     
+        <!--JavaScript Bootstap link and info-->
         <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

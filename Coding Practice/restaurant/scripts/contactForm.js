@@ -13,67 +13,45 @@ function clearErrors() {
 
 function validate() {
     clearErrors();
+    
+    //Check that name, email, phone are filled in
     var name = document.forms["contact"]["name"].value;
     var email = document.forms["contact"]["email"].value;
     var phone = document.forms["contact"]["phone"].value;
                 
     if (name == "" || email == "" || phone == "") {
-        alert("Please fill in all fields of this form."); 
+        alert("Please fill in required fields (in bold)."); 
         return false;
     }
-                
+    
+    //Check that the "have been" question was answered
     if (document.getElementById("choice1").checked || document.getElementById("choice2").checked) {
             
     } else {
-        alert("Please fill in all fields of this form.");
+        alert("Please fill in required fields (in bold).");
         return false;
     }
     
-    /*
-    if (document.getElementById("choice2").checked) {
-           
-    } else {
-        alert("Please fill in all fields of this form.");
-        return false;
+    //Check that "best days to contact" question was answered
+    var boxes = document.getElementsByName("contactDays");
+    var validate = false;
+    for(var i=0;i<boxes.length;i++)
+    {
+        if(boxes[i].checked)
+        {
+            validate = true;
+            break;
+        }
     }
-    */
     
-    if (document.getElementById("monday").checked || document.getElementById("tuesday").checked || document.getElementById("wednesday").checked || document.getElementById("thursday").checked || document.getElementById("friday").checked) {
-            
+    if (validate) {
+        
     } else {
-        alert("Please fill in all fields of this form.");
-        return false;
+        alert("Please fill in required fields (in bold).");
+        return false;   
     }
-    /*            
-    if (document.getElementById("tuesday").checked) {
-            
-    } else {
-        alert("Please fill in all fields of this form.");
-        return false;
-    }
-                
-    if (document.getElementById("wednesday").checked) {
-           
-    } else {
-        alert("Please fill in all fields of this form.");
-        return false;
-    }
-                
-    if (document.getElementById("thursday").checked) {
-           
-    } else {
-        alert("Please fill in all fields of this form.");
-        return false;
-    }
-                
-    if (document.getElementById("friday").checked) {
-           
-    } else {
-        alert("Please fill in all fields of this form.");
-        return false;
-    }
-    */ 
     
-    alert("Form validated and submitted!");
+    //If everything looks good, notify user and print out confirmation
+    alert("Your request has been sent & you will hear from us soon!");
     return true;
 }

@@ -7,6 +7,8 @@ function clearErrors() {
     }    
 } 
 
+//Function to clear the game in case the user wants to play again
+//Attached to "Play Again" button
 function resetGame() {
     clearErrors();
     document.forms["luckySevens"]["startingBet"].value = "";
@@ -33,8 +35,12 @@ function findMax(Array) {
 }
 
 //Primary function for the Lucky Sevens game
+//Attached to "Play" button
 function playGame() {
     clearErrors();
+    
+    //Collect starting bet amount for the game
+    //Check to make sure that it's a valid amount, otherwise notify of error and exit
     var startingBet = document.forms["luckySevens"]["startingBet"].value;
     if (startingBet == "" || isNaN(startingBet) || startingBet <= 0) {
         alert("Please place a bet greater than $0.00");
@@ -46,12 +52,12 @@ function playGame() {
     
     //Define key variables and initialize them
     var money = 0;
-    money = startingBet; //money active in the game
+    money = Number(startingBet); //money active in the game, convert from string input
     var totalRolls = 0; //total rolls before going broke
     var highestAmt = 0; //highest amount won
     var rollCount = 0; //roll count at highest amount won
     
-    var amtWon = new Array(); //Array for amount of money won per round
+    var amtWon = new Array(); //Array for amount of money held at each round
     var amtWonRollsIndex = new Array(); //Array for the roll # index of above Array
     
     var die1 = 0;
@@ -66,19 +72,23 @@ function playGame() {
         total = die1 + die2;
         totalRolls++;
         
+        //Decision tree as game goes on
         if(total == 7) {
             money = money + 4;
-            amtWon.unshift(money);
-            amtWonRollsIndex.unshift(totalRolls);
+            amtWon.push(money); //keep track of the amount of money held at each round
+            amtWonRollsIndex.push(totalRolls); //roll index array for above
         } else {
             money = money - 1;
-            amtWon.unshift(money);
-            amtWonRollsIndex.unshift(totalRolls);
+            amtWon.push(money); //keep track of the amount of money held at each round
+            amtWonRollsIndex.push(totalRolls); //roll index array for above
         }
     }
     
     //Find highest value of amtWon
     highestAmt = findMax(amtWon);
+    
+    //Total rolls before going broke
+    totalRolls = totalRolls - 1; //since final roll was the one that got player broke
     
     //Find the roll count for the highest amount won
     var highestAmtIndex = amtWon.indexOf(highestAmt);
@@ -93,12 +103,11 @@ function playGame() {
     
     //Display results information within the div
     document.getElementById("results").style.visibility = "visible";
-    
     document.getElementById("startBet").innerText = displayStartingBet;
     document.getElementById("totalRolls").innerText = totalRolls;
     document.getElementById("highestAmt").innerText = displayHighestAmt;
     document.getElementById("rollCount").innerText = rollCount;
-    // We are returning false so that the form doesn't submit 
-    // and so that we can see the results
+    
+    // Returning false so that the form doesn't submit and to see results 
     return false;
 }
