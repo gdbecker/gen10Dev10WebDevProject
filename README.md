@@ -1,3 +1,4 @@
 # gen10Dev10WebDevProject
-Repository containing files for Web Development Course & Project as part of Genesis10 Dev10 recruiting process, fall 2019. Course created by Software Guild
+
+As part of the interview process for Genesis10's Dev10 Java bootcamp, I went through a crash course on web development, specifically HTML, CSS and JavaScript basics. Take a look at the projects I worked on and submitted in order to be move on to the next stage - culminating in the LuckySevens game!
 
